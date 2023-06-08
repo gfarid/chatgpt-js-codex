@@ -9,11 +9,17 @@
   </head>
   <body>
     <div id="app">
+      <button class="connect"> Connect to magic bulb</button>
+      <!-- <audio id="partyAudio">
+        <source src="assets/party.mp3" type="audio/mp3">
+      </audio> -->
       <div id="chat_container"></div>
       <form>
         <textarea name="prompt" rows="1" cols="1" placeholder="Ask codex..."></textarea>
         <button type="submit"><img src="assets/send.svg" alt="send" />
       </form>
+      <button id="toggle-mic">Turn on microphone</button>
+      <div id="status">Microphone is off</div>
     </div>
     <script type="module" src="main.js"></script>
   </body>
