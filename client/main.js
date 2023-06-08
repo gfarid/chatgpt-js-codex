@@ -224,7 +224,7 @@ if (!('webkitSpeechRecognition' in window)) {
   
     recognition.onstart = function() {
       console.log('Speech recognition started');
-      document.getElementById('status').textContent = 'Microphone is on';
+      //document.getElementById('status').textContent = 'Microphone is on';
 
     };
   
@@ -249,7 +249,7 @@ if (!('webkitSpeechRecognition' in window)) {
         if (isListening) {
           recognition.start();
         } else {
-          document.getElementById('status').textContent = 'Microphone is off';
+          //document.getElementById('status').textContent = 'Microphone is off';
         }
     };
   
@@ -260,11 +260,15 @@ if (!('webkitSpeechRecognition' in window)) {
     isListening = !isListening;
     if (isListening) {
       recognition.start();
-      this.textContent = 'Turn off microphone';
+     // this.textContent = 'Turn off microphone';
     } else {
       recognition.stop();
-      this.textContent = 'Turn on microphone';
+     // this.textContent = 'Turn on microphone';
     }
   });
 
+  let mic = document.querySelector('#toggle-mic');
+  mic.addEventListener('click' , (function() {
+    mic.classList.toggle("active");
+  }));
   

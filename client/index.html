@@ -8,19 +8,19 @@
     <title>ChatGPT-JS-Codex</title>
   </head>
   <body>
-    <div id="app">
+    <header>
+      <h1>Welcome to my ChatGPT</h1>
       <button class="connect"> Connect to magic bulb</button>
-      <!-- <audio id="partyAudio">
-        <source src="assets/party.mp3" type="audio/mp3">
-      </audio> -->
+    </header>
+    <div id="app">
       <div id="chat_container"></div>
       <form>
-        <textarea name="prompt" rows="1" cols="1" placeholder="Ask codex..."></textarea>
-        <button type="submit"><img src="assets/send.svg" alt="send" />
+        <div class="input-container">
+          <textarea name="prompt" rows="2" cols="1" placeholder="Ask codex..."></textarea>
+          <button type="button" id="toggle-mic"><img src="assets/mic.png" alt="Toggle microphone" /></button>
+        </div>
+        <button type="submit"><img src="assets/send.svg" alt="send" /></button>
       </form>
-      <button id="toggle-mic">Turn on microphone</button>
-      <div id="status">Microphone is off</div>
-    </div>
     <script type="module" src="main.js"></script>
   </body>
 </html>
