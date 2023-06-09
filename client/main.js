@@ -110,7 +110,7 @@ const handleSubmit = async (e) => {
         } else if (data.bot.trim().includes('go party')) {
             DiscoEffect();
             //playAudio(partyAudio);
-            var audio = new Audio('./public/party.mp3');
+            var audio = new Audio('party.mp3');
             audio.play();
         } else {
             //setRandomColor();
